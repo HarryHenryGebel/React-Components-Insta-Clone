@@ -7,6 +7,10 @@ import {requester} from "easier-requests";
 const PostsPage = () => {
   const [postList, setPostList] = useState(dummyData);
 
+  function addLike(key) {
+    const newLikes = postList[key];
+  }
+
   return (
     <div className="posts-container-wrapper">
       {postList.map((post, key) => <Post
