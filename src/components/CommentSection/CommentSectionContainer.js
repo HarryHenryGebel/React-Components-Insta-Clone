@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CommentInput from "./CommentInput";
 import Comment from "./Comment";
 import "./Comment.css";
+import {requester} from "easier-requests";
 
 const CommentSection = props => {
   const [comments, setComments] = useState(props.comments);
@@ -9,7 +10,7 @@ const CommentSection = props => {
   return (
     <div>
       {comments.map((comment, key) => <Comment
-                                        key = {key}
+                                        key = {requester.createUniqueID()}
                                         comment = {comment} />)}
       <CommentInput />
     </div>
