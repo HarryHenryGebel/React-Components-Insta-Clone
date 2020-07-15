@@ -19,7 +19,8 @@ const Post = props => {
           src={post.imageUrl}
         />
       </div>
-      <LikeSection likeCount = {post.likes} likePost = {() => likePost(post.id)} />
+      <LikeSection likeCount = {post.likes}
+                   likePost = {() => likePost(post.id)} />
       <Comments comments = {post.comments}/>
     </div>
   );
